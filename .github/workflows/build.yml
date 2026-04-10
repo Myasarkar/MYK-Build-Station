@@ -23,7 +23,15 @@ jobs:
 
     # KRİTİK: Android 16 SDK Lisanslarını Onayla
     - name: Accept Android SDK Licenses
-      run: yes | sdkmanager --licenses
+      run: |
+        echo "Searching for sdkmanager in $ANDROID_HOME/cmdline-tools..."
+        SDKMANAGER=$(find $ANDROID_HOME/cmdline-tools -name "sdkmanager" -type f -executable | head -n 1)
+        if [ -z "$SDKMANAGER" ]; then
+          echo "Error: sdkmanager not found!"
+          exit 1
+        fi
+        echo "Found sdkmanager at: $SDKMANAGER"
+        yes | "$SDKMANAGER" --licenses
 
     # KRİTİK: Embedded Binaries İndirme ve Yetkilendirme
     - name: Download Embedded Environment

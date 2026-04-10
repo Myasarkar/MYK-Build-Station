@@ -1,20 +1,18 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# MYK Build
 
-# Run and deploy your AI Studio app
+A fully native, on-device Android project compiler and APK builder optimized for Android 16 (SDK 36). Turn your Android device into a complete mobile engineering station.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/4015ca55-de13-4800-a5e0-698f621cf348
+* **🚀 On-Device Compilation:** No cloud, no remote servers. Pure local build power.
+* **📦 Embedded Engine:** Ships with ARM64-v8a compatible JDK 17 & Gradle 8.10.2.
+* **📊 Real-time Metrics:** Live CPU/RAM monitoring during heavy build tasks.
+* **🔍 Smart Error Parser:** Automatically filters Gradle logs to find the root cause of build failures.
+* **🌍 Multi-language Support:** English, Turkish, Chinese, and Hindi.
+* **🛡️ Modern Stack:** Built with Kotlin, Material 3, and optimized for Android 16.
 
-## Run Locally
+---
+*Powered by MYK Soft*
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Topics
+`android-16` `sdk-36` `gradle-compiler` `native-android` `kotlin` `mobile-development` `local-build` `arm64` `myk-soft`
