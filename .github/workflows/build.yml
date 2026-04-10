@@ -52,7 +52,7 @@ jobs:
         echo "android.suppressUnsupportedCompileSdk=36" >> gradle.properties
         echo "org.gradle.jvmargs=-Xmx4096m" >> gradle.properties
         echo "org.gradle.parallel=true" >> gradle.properties
-        echo "org.gradle.configuration-cache=true" >> gradle.properties
+        echo "org.gradle.configuration-cache=false" >> gradle.properties
         echo "android.useAndroidX=true" >> gradle.properties
 
     # KRİTİK: Dizin Kontrolü, Wrapper Üretimi ve İzin Ataması
@@ -74,7 +74,7 @@ jobs:
         chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew assembleDebug --no-daemon
+      run: ./gradlew assembleDebug --no-daemon --no-configuration-cache
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
