@@ -55,6 +55,24 @@ jobs:
         echo "org.gradle.configuration-cache=true" >> gradle.properties
         echo "android.useAndroidX=true" >> gradle.properties
 
+    # KRİTİK: Dizin Kontrolü, Wrapper Üretimi ve İzin Ataması
+    - name: Verify Workspace and Set Permissions
+      run: |
+        echo "--- Kök Dizin Yapısı ---"
+        ls -la
+        
+        echo "--- App Klasörü Yapısı ---"
+        ls -R app/ || echo "app klasörü bulunamadı!"
+        
+        # Eğer gradlew dosyası repoya eklenmemişse, setup-gradle'ın sağladığı global gradle ile anında üretelim
+        if [ ! -f "./gradlew" ]; then
+          echo "Uyarı: gradlew dosyası bulunamadı! Otomatik olarak oluşturuluyor..."
+          gradle wrapper --gradle-version 8.10.2
+        fi
+        
+        echo "gradlew dosyasına çalıştırma izni veriliyor..."
+        chmod +x gradlew
+
     - name: Build with Gradle
       run: ./gradlew assembleDebug --no-daemon
 
