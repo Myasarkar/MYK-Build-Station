@@ -1,0 +1,5 @@
+{
+  "name": "MYK Build",
+  "description": "Local Android project compiler and APK builder.",
+  "requestFramePermissions": []
+}

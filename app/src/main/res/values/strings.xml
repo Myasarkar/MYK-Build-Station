@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MYK Build</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="ram_usage">RAM Usage: %1$s MB / %2$s MB</string>
+    <string name="btn_select_zip">Select Project (.zip)</string>
+    <string name="btn_start_build">Start Build</string>
+    <string name="switch_offline_mode">Offline Mode</string>
+    <string name="terminal_title">Terminal View</string>
+    <string name="error_summary_title">Error Summary</string>
+    <string name="btn_copy_error">Copy Error</string>
+    <string name="library_manager_title">Library Manager</string>
+    <string name="btn_download_lib">Download Library</string>
+    <string name="powered_by_myk">Powered by MYK Soft</string>
+    <string name="about_title">About MYK Build</string>
+    <string name="project_details">Project: %1$s\nSize: %2$s</string>
+    <string name="critical_memory_warning">Critical Memory! Background apps may be killed.</string>
+</resources>

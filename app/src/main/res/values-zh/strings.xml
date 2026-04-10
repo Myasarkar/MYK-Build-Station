@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MYK Build</string>
+    <string name="dashboard_title">仪表板</string>
+    <string name="ram_usage">内存使用: %1$s MB / %2$s MB</string>
+    <string name="btn_select_zip">选择项目 (.zip)</string>
+    <string name="btn_start_build">开始构建</string>
+    <string name="switch_offline_mode">离线模式</string>
+    <string name="terminal_title">终端视图</string>
+    <string name="error_summary_title">错误摘要</string>
+    <string name="btn_copy_error">复制错误</string>
+    <string name="library_manager_title">库管理器</string>
+    <string name="btn_download_lib">下载库</string>
+    <string name="powered_by_myk">由 MYK Soft 提供支持</string>
+    <string name="about_title">关于 MYK Build</string>
+    <string name="project_details">项目: %1$s\n大小: %2$s</string>
+    <string name="critical_memory_warning">内存严重不足！后台应用可能会被关闭。</string>
+</resources>

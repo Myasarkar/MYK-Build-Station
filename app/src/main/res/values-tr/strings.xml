@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MYK Build</string>
+    <string name="dashboard_title">Gösterge Paneli</string>
+    <string name="ram_usage">RAM Kullanımı: %1$s MB / %2$s MB</string>
+    <string name="btn_select_zip">Proje Seç (.zip)</string>
+    <string name="btn_start_build">Derlemeyi Başlat</string>
+    <string name="switch_offline_mode">Çevrimdışı Mod</string>
+    <string name="terminal_title">Terminal Ekranı</string>
+    <string name="error_summary_title">Hata Özeti</string>
+    <string name="btn_copy_error">Hatayı Kopyala</string>
+    <string name="library_manager_title">Kütüphane Merkezi</string>
+    <string name="btn_download_lib">Kütüphane İndir</string>
+    <string name="powered_by_myk">MYK Soft Tarafından Desteklenmektedir</string>
+    <string name="about_title">MYK Build Hakkında</string>
+    <string name="project_details">Proje: %1$s\nBoyut: %2$s</string>
+    <string name="critical_memory_warning">Kritik Bellek! Arka plan uygulamaları kapatılabilir.</string>
+</resources>

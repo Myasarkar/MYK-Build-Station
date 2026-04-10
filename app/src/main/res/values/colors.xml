@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material 3 Tech/Dark Theme Colors -->
+    <color name="md_theme_primary">#4DABF7</color> <!-- Tech Blue -->
+    <color name="md_theme_onPrimary">#000000</color>
+    <color name="md_theme_secondary">#69DB7C</color> <!-- Success Green -->
+    <color name="md_theme_onSecondary">#000000</color>
+    <color name="md_theme_error">#FF6B6B</color> <!-- Alert Red -->
+    <color name="md_theme_onError">#FFFFFF</color>
+    <color name="md_theme_background">#121212</color> <!-- Deep Dark -->
+    <color name="md_theme_onBackground">#E0E0E0</color>
+    <color name="md_theme_surface">#1E1E1E</color> <!-- Card Dark -->
+    <color name="md_theme_onSurface">#E0E0E0</color>
+    <color name="md_theme_surfaceVariant">#2D2D2D</color>
+    
+    <!-- Terminal Specific Colors -->
+    <color name="terminal_background">#000000</color>
+    <color name="terminal_text_normal">#A9B7C6</color>
+    <color name="terminal_text_error">#FF5252</color>
+    <color name="terminal_text_success">#A6E22E</color>
+</resources>

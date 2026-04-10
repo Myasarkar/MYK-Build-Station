@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MYK Build</string>
+    <string name="dashboard_title">डैशबोर्ड</string>
+    <string name="ram_usage">रैम उपयोग: %1$s MB / %2$s MB</string>
+    <string name="btn_select_zip">प्रोजेक्ट चुनें (.zip)</string>
+    <string name="btn_start_build">बिल्ड शुरू करें</string>
+    <string name="switch_offline_mode">ऑफ़लाइन मोड</string>
+    <string name="terminal_title">टर्मिनल दृश्य</string>
+    <string name="error_summary_title">त्रुटि सारांश</string>
+    <string name="btn_copy_error">त्रुटि कॉपी करें</string>
+    <string name="library_manager_title">लाइब्रेरी मैनेजर</string>
+    <string name="btn_download_lib">लाइब्रेरी डाउनलोड करें</string>
+    <string name="powered_by_myk">MYK Soft द्वारा संचालित</string>
+    <string name="about_title">MYK Build के बारे में</string>
+    <string name="project_details">प्रोजेक्ट: %1$s\nआकार: %2$s</string>
+    <string name="critical_memory_warning">महत्वपूर्ण मेमोरी! पृष्ठभूमि ऐप्स बंद किए जा सकते हैं।</string>
+</resources>

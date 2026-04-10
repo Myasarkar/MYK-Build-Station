@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.myksoft.build">
+
+    <!-- Scoped Storage ve Manage External Storage İzinleri (Adım 1 için hazırlık) -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    
+    <!-- İnternet İzni (Kütüphane indirme ve CI/CD işlemleri için) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <!-- Haptic Feedback (Titreşim) İzni -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".MykBuildApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MYK Build"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MYKBuild"
+        android:requestLegacyExternalStorage="true">
+        
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MYKBuild">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".core.CrashActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MYKBuild" />
+            
+    </application>
+
+</manifest>

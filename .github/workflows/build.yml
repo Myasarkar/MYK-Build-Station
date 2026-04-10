@@ -1,0 +1,57 @@
+name: MYK Build CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    # KRİTİK: Android 16 SDK Lisanslarını Onayla
+    - name: Accept Android SDK Licenses
+      run: yes | sdkmanager --licenses
+
+    # KRİTİK: Embedded Binaries İndirme ve Yetkilendirme
+    - name: Download Embedded Environment
+      run: |
+        mkdir -p app/src/main/assets/embedded_env
+        echo "Downloading ARM64 JDK and Gradle binaries for embedded execution..."
+        
+        # Gerçek indirme linkleri (Adoptium Temurin 17 ARM64 ve Gradle 8.10.2)
+        curl -L -o app/src/main/assets/embedded_env/jdk-17-arm64.tar.gz "https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.10%2B7/OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.10_7.tar.gz"
+        curl -L -o app/src/main/assets/embedded_env/gradle-8.10.2-bin.zip "https://services.gradle.org/distributions/gradle-8.10.2-bin.zip"
+        
+        echo "Verifying downloaded files (Binary Paketleme Doğrulaması):"
+        ls -lh app/src/main/assets/embedded_env/
+
+    # KRİTİK: SDK 36 Uyumluluk Ayarı ve Bellek Bariyeri
+    - name: Prepare Gradle Properties
+      run: |
+        echo "android.suppressUnsupportedCompileSdk=36" >> gradle.properties
+        echo "org.gradle.jvmargs=-Xmx4096m" >> gradle.properties
+        echo "org.gradle.parallel=true" >> gradle.properties
+        echo "org.gradle.configuration-cache=true" >> gradle.properties
+        echo "android.useAndroidX=true" >> gradle.properties
+
+    - name: Build with Gradle
+      run: ./gradlew assembleDebug --no-daemon
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: myk-build-station-debug
+        path: app/build/outputs/apk/debug/*.apk
